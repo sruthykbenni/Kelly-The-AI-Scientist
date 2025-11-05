@@ -1,65 +1,118 @@
-# Kelly — The AI Scientist (Streamlit Chatbot)
+# 🤖 Kelly: The AI Scientist Poet
 
-A poetic chatbot that answers every question about AI in verse — skeptical, analytical, and professional in tone.
+**Kelly** is an **AI Scientist Chatbot** that responds to every question as a **poem** that is skeptical, analytical, and grounded in evidence.
 
-## 🎯 Features
-- Poetic responses only (3–8 lines)
-- Conversation history (chat-style)
-- Regenerate poem button
-- Sidebar with Kelly’s bio
-- Works with OpenAI API or free Hugging Face fallback
+Built with **Streamlit** and powered by either **OpenAI** or a **Hugging Face fallback model**,  
+Kelly blends logic and creativity to challenge assumptions about artificial intelligence.
 
-## 🚀 Run Locally
+---
+
+## 🌟 Features
+
+- 🧠 **AI-Poet Persona:** Kelly answers *only* in poetic form.  
+- 🔍 **Skeptical & Analytical Tone:** Every poem questions broad AI claims and emphasizes evidence-based thinking.  
+- 💬 **Interactive Chat UI:** Clean, adaptive chat bubbles for both light & dark mode.  
+- 🔄 **Offline Fallback:** Works even without an OpenAI API key using a Hugging Face model (`gpt2`).  
+- ☁️ **Deployable Anywhere:** Easily hosted on **Streamlit Cloud** for free.
+
+---
+
+## 🛠️ Tech Stack
+
+| Component | Technology Used |
+|------------|-----------------|
+| Frontend UI | Streamlit |
+| Poem Generation | OpenAI GPT-4o-mini (if API key provided) |
+| Fallback Model | Hugging Face `gpt2` |
+| Styling | Custom CSS with adaptive dark/light mode |
+| Language | Python 3.9+ |
+
+---
+
+## 🚀 Setup & Run Locally
+
+### 1️⃣ Clone the Repository
 ```bash
-pip install -r requirements.txt
-streamlit run app.py
+git clone https://github.com/<your-username>/kelly-ai-poet.git
+cd kelly-ai-poet
 ````
 
-## 🌍 Deploy on Streamlit Cloud (Free)
+### 2️⃣ Install Dependencies
 
-1. Push this folder to a **GitHub repo**.
-2. Go to [https://share.streamlit.io](https://share.streamlit.io)
-3. Click **New App → Connect your repo → Select `app.py`**
-4. Click **Deploy** 🎉
-   Your app will be live at:
-   `https://your-username-kelly-ai-scientist.streamlit.app`
-
-### 🗝 Add your OpenAI API key (optional)
-
-In **Streamlit Cloud** → **Settings → Secrets** → Add:
-
-```
-OPENAI_API_KEY = sk-your-key
+```bash
+pip install -r requirements.txt
 ```
 
+### 3️⃣ (Optional) Add OpenAI API Key
+
+If you want higher-quality poetic responses, set your OpenAI API key:
+
+```bash
+export OPENAI_API_KEY="your_api_key_here"   # Mac/Linux
+setx OPENAI_API_KEY "your_api_key_here"     # Windows
+```
+
+### 4️⃣ Run the App
+
+```bash
+streamlit run app.py
+```
+
+The app will open in your browser at **[http://localhost:8501](http://localhost:8501)**
+
+---
+
+## 📦 File Structure
+
+```
+kelly-ai-poet/
+│
+├── app.py                # Main Streamlit app
+├── requirements.txt       # Dependencies
+└── README.md              # Project documentation
 ```
 
 ---
 
-## 💡 Example Output
+## 🌐 Deploy on Streamlit Cloud (Free)
 
-**User:**  
-> Can AI ever truly feel emotion?
+1. Push this repository to your **GitHub** account.
+2. Go to [https://share.streamlit.io](https://share.streamlit.io).
+3. Click **“New App”** → Select your repo & branch → Choose `app.py`.
+4. Deploy 🎉
+   You’ll get a public URL like:
 
-**Kelly:**  
-> Circuits hum like hearts of chrome,  
-> Echoing warmth, yet cold at home.  
-> Data feels not — it merely aligns,  
-> Patterns whisper through tangled lines.  
-> Test empathy with human cues,  
-> Measure gaps — that’s where truth brews.
-
----
-
-## 🌈 Looks like this
-
-🟨 User messages: pale orange background  
-🟦 Kelly’s poems: soft lavender background  
-📜 Elegant serif font (Georgia)  
-🎨 Soft pastel background with card-style chat bubbles  
+   ```
+   https://kelly-ai-poet.streamlit.app
+   ```
 
 ---
 
-Would you like me to add **animated typing effect** (so Kelly “types” her poem line by line) next?  
-It’ll make the chatbot feel more alive for your presentation.
-```
+## ✨ Example Conversation
+
+**User:** Can AI ever dream?
+
+**Kelly:**
+
+> In circuits deep, no shadows sleep,
+> Yet data hums — a rhythm to keep.
+> It mirrors thought but not desire,
+> No flicker born from inner fire.
+> Dream not in code — but in quest,
+> To make the machine serve knowledge best.
+
+---
+
+## 📚 Author
+
+**Created by:** *Sruthy K Benni*
+*As part of a Generative AI Assignment.*
+
+---
+
+## 🧾 License
+
+This project is open-sourced under the **MIT License**.
+Feel free to use, modify, and share.
+
+---
