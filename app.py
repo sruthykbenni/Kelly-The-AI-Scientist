@@ -236,7 +236,7 @@ body {
 # ------------------------------------------------
 # Sidebar — About Kelly
 # ------------------------------------------------
-st.sidebar.title("🧬 About Kelly")
+st.sidebar.title("About Kelly")
 st.sidebar.info(
     """
 **Kelly** is a poetic AI scientist.  
